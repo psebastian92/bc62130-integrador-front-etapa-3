@@ -1,0 +1,126 @@
+{
+  "productos": [
+    {
+      "nombre": "Arduino UNO Compatible SMD",
+      "foto": "img/arduino-uno-compatible-smd.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": 250.5,
+      "stock": "4",
+      "marca": "Arduino",
+      "categoria": "Microcontrolador",
+      "id": 1,
+      "envio": false
+    },
+    {
+      "nombre": "Arduino NANO V3 Atmega328p",
+      "foto": "img/arduino-nano.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": 240.3,
+      "stock": "4",
+      "marca": "Arduino",
+      "categoria": "Microcontrolador",
+      "id": 2,
+      "envio": true
+    },
+    {
+      "nombre": "Módulo Shield - Arduino NANO",
+      "foto": "img/shield-nano.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": 985,
+      "stock": 4,
+      "marca": "Arduino",
+      "categoria": "Shield",
+      "id": 3,
+      "envio": true
+    },
+    {
+      "nombre": "NodeMCU ESP8266",
+      "foto": "img/esp8266.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": 678,
+      "stock": 7,
+      "marca": "NodeMCU",
+      "categoria": "Microcontrolador",
+      "id": 4,
+      "envio": true
+    },
+    {
+      "nombre": "NodeMCU ESP32",
+      "foto": "img/esp32.jpeg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": 1200,
+      "stock": 4,
+      "marca": "NodeMCU",
+      "categoria": "Microcontrolador",
+      "id": 5,
+      "envio": true
+    },
+    {
+      "nombre": "Kit 120 Cables 20cm Protoboard Arduino",
+      "foto": "img/cables-dupont.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": 332.22,
+      "stock": 4,
+      "marca": "Arduino",
+      "categoria": "Cable",
+      "id": 6,
+      "envio": true
+    },
+    {
+      "nombre": "Servomotor S3003 3,2Kg",
+      "foto": "img/servomotor-s3003.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": 333.22,
+      "stock": 2,
+      "marca": "Arduino",
+      "categoria": "Motor",
+      "id": 7,
+      "envio": false
+    },
+    {
+      "nombre": "Display LCD Azul 20x4",
+      "foto": "img/lcd-azul.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": "2222",
+      "stock": "2",
+      "marca": "Arduino",
+      "categoria": "Display",
+      "id": 8,
+      "envio": true
+    },
+    {
+      "nombre": "Chasis Auto Robot",
+      "foto": "img/chasis-auto.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": "2222",
+      "stock": "2",
+      "marca": "Arduino",
+      "categoria": "Robot",
+      "id": 9,
+      "envio": true
+    },
+    {
+      "nombre": "Brazo Robot",
+      "foto": "img/brazo-robot.jpg",
+      "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+      "precio": "2222",
+      "stock": "2",
+      "marca": "Arduino",
+      "categoria": "Robot",
+      "id": 10,
+      "envio": false
+    },
+    {
+      "id": 15,
+      "nombre": "Sebastián",
+      "precio": "",
+      "stock": "",
+      "marca": "",
+      "categoria": "",
+      "detalles": "",
+      "foto": "",
+      "envio": false
+    }
+  ],
+  "carrito": []
+}

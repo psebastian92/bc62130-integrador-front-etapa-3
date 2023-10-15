@@ -1,0 +1,24 @@
+.about-us {
+    background: linear-gradient(to bottom, #888888, #F19C2C) ;
+     padding: 10px;
+ 
+     &__title {
+         display: flex;
+         justify-content: center;
+         font-size: 2em;
+     }
+ 
+     &__span {
+         font-weight: bold;
+     }
+ 
+     &__content {
+         margin: 10px;
+         font-size: 1.5em;
+         color: black;
+     }
+ 
+ 
+ 
+ 
+ }
