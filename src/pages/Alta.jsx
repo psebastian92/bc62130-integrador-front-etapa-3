@@ -1,3 +1,4 @@
+import './Alta.scss';
 import {useState} from 'react'
 import Formulario from '../components/Formulario'
 import Tabla from '../components/Tabla'
