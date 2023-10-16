@@ -111,5 +111,20 @@
       "envio": false
     }
   ],
-  "carrito": []
+  "carrito": [
+    [
+      {
+        "nombre": "NodeMCU ESP32",
+        "foto": "img/esp32.jpeg",
+        "detalles": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam obcaecati tempora, ratione facilis totam maiores!",
+        "precio": 1200,
+        "stock": 4,
+        "marca": "NodeMCU",
+        "categoria": "Microcontrolador",
+        "id": 5,
+        "envio": true,
+        "cantidad": 4
+      }
+    ]
+  ]
 }

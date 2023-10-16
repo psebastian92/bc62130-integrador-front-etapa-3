@@ -3,16 +3,28 @@ import "./Carrito.scss";
 import CarritoContext from "../contexts/CarritoContext";
 
 const Carrito = () => {
-  const { carrito, eliminarCarritoContext } = useContext(CarritoContext);
+  const { carrito, eliminarCarritoContext, guardarCarritoContext  } = useContext(CarritoContext);
 
   const handleEliminar = (id) => {
     //console.log(id)
     eliminarCarritoContext(id);
   };
 
+  const calcularTotal = () => {
+    let sumaTotal = carrito.reduce((total, prod) => {
+      return total + (prod.precio * prod.cantidad)
+    }, 0)
+    return sumaTotal
+  }
+
+  const handleComprar = () => {
+    guardarCarritoContext()
+  }
+
   return (
     <>
       <h1>Listado de productos en el carrito</h1>
+      { !carrito.length <= 0 && <button onClick={handleComprar}>Comprar</button>}
       <table className="tabla-carrito">
         <thead>
           <tr>
@@ -26,7 +38,7 @@ const Carrito = () => {
         <tbody>
           {carrito.length <= 0 ? (
             <tr>
-              <td colSpan={5}>
+              <td colSpan={5} style={{textAlign: 'center'}}>
                 <strong>No hay productos</strong>
               </td>
             </tr>
@@ -47,6 +59,11 @@ const Carrito = () => {
               </tr>
             ))
           )}
+           <tr>
+            <td colSpan={3}><strong>Total</strong></td>
+            <td><strong>${parseFloat(calcularTotal()).toFixed(2)}</strong></td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
     </>
