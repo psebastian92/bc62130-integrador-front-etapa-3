@@ -3,201 +3,191 @@
 /* ------------------------------------- */
 
 .main-header {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+#menu {
+  display: none;
+
+  &:checked + .nav-bar {
+    display: block;
+  }
+
+  &:checked ~ .search-bar .menu-toogle__label {
+    background-color: gold;
+  }
+}
+
+/* ------------------------------------- */
+/* NAVBAR                                */
+/* ------------------------------------- */
+
+.nav-bar {
+  background-color: gold;
+
+  &__nav-list {
     display: flex;
-    flex-direction: column;
-  
+    list-style-type: none;
+    justify-content: center;
+
     @media (max-width: 768px) {
       & {
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
     }
-  
-  
   }
-  
-  #menu {
-    display: none;
-  
-    &:checked + .nav-bar {
-      display: block;
-    }
-  
-    &:checked ~ .search-bar .menu-toogle__label {
-      background-color: gold;
-    }
-  
+
+  &__nav-item {
+    text-align: center;
+    background-color: pink;
   }
-  
-  /* ------------------------------------- */
-  /* NAVBAR                                */
-  /* ------------------------------------- */
-  
-  .nav-bar {
+  &__nav-link {
+    display: block;
     background-color: gold;
-  
-    &__nav-list {
-      display: flex;
-      list-style-type: none;
-      justify-content: center;
-  
-      @media (max-width: 768px) {
-        & {
-          flex-direction: column;
-        }
-      }
-    }
-  
-    &__nav-item {
-      text-align: center;
-      background-color: pink;
-    }
-    &__nav-link {
-      display: block;
-      background-color: gold;
-      border: 0.1em solid gold;
-      border-radius: 0.3em;
-      color: black;
-      font-weight: bold;
-      padding: 1em 5em;
-      text-decoration: none;
-      transition: 0.5s ease;
-         
-    }
-  
-    &:hover &__nav-link {
-      background-color: yellow; 
-      border-radius: 0.3em;
-      font-size: 1.02em;
-      cursor: pointer;
-      box-shadow: 0px 0px 10px 0px orangered;
-  
-      &:active {
-        background-color: orange;
-      }
-    }
-  
-    @media (max-width: 768px) {
-      & {
-        display: none;
-      }
+    border: 0.1em solid gold;
+    border-radius: 0.3em;
+    color: black;
+    font-weight: bold;
+    padding: 1em 7em;
+    text-decoration: none;
+    transition: 0.5s ease;
+  }
+
+  &:hover &__nav-link {
+    background-color: yellow;
+    border-radius: 0.3em;
+    font-size: 1.02em;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px orangered;
+
+    &:active {
+      background-color: orange;
     }
   }
-  
-  /* ------------------------------------- */
-  /* SEARCH BAR                            */
-  /* ------------------------------------- */
-  
-  .search-bar {
-    background-color: gold;
+
+  @media (max-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+/* ------------------------------------- */
+/* SEARCH BAR                            */
+/* ------------------------------------- */
+
+.search-bar {
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo-container,
+  &__form-container,
+  &__carrito-container {
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    &__logo-container,
-    &__form-container,
-    &__carrito-container {
-      display: block;
-      justify-content: center;
-      align-items: center;
-      padding: 1em;
-    }
-  
-    &__logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: gold;
-    }
-  
-    &__logo-img {
-      transform: scale(2);
-    }
-  
-    &__form-container {
-      background-color: gold;
-      display: flex;
-      flex-basis: 100%;
-      justify-content: center;
-    }
-  
-    &__form-label {
-      padding: 2px;
-      font-weight: bold;
-    }
-  
-    &__form-search {
-      background-color: orangered;
-      width: 50%;
-    }
-  
-    &__form-submit {
-      padding-inline: .5em;
-      background-color: darkslategray;
-      color: white;
-    }
-  
-    &__carrito-container {
-      flex: 0 0 1em; /* shorthand (grow shrink basis */
-      padding-right: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
+    padding: 1em;
+  }
 
-    &__cart-icon {
-      
-      transform: scale(1.5);
-      
-     
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+  }
+
+  &__logo-img {
+    transform: scale(2);
+  }
+
+  &__form-container {
+    background-color: gold;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  &__form-label {
+    padding: 2px;
+    font-weight: bold;
+  }
+
+  &__form-search {
+    background-color: orangered;
+    width: 50%;
+  }
+
+  &__form-submit {
+    padding-inline: 0.5em;
+    background-color: darkslategray;
+    color: white;
+  }
+
+  &__carrito-container {
+    flex: 0 0 1em; /* shorthand (grow shrink basis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cart-icon {
+    transform: scale(1.5);
+  }
+}
+
+/* ------------------------------------- */
+/* MENU TOOGLE                           */
+/* ------------------------------------- */
+
+.menu-toggle {
+  display: none;
+  background-color: red;
+  flex: 0 0 3em;
+  position: relative;
+  cursor: pointer;
+
+  &__label {
+    display: block;
+    background-color: black;
+    height: 100%;
+  }
+
+  &__top-bread,
+  &__meat,
+  &__bottom-bread {
+    display: block;
+    background-color: #333;
+    height: 0.2em;
+    position: absolute;
+    left: 0.5em;
+    right: 0.5em;
+  }
+
+  &__top-bread {
+    top: 0.8em;
+  }
+
+  &__meat {
+    top: 50%;
+    margin-top: -0.1em;
+  }
+
+  &__bottom-bread {
+    bottom: 0.8em;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      display: block;
     }
   }
-  
-  /* ------------------------------------- */
-  /* MENU TOOGLE                           */
-  /* ------------------------------------- */
-  
-  .menu-toggle {
-    display: none;
-    background-color: red;
-    flex: 0 0 3em;
-    position: relative;
-    cursor: pointer;
-  
-    &__label {
-      display: block;
-      background-color: black;
-      height: 100%;
-    }
-  
-    &__top-bread,
-    &__meat,
-    &__bottom-bread {
-      display: block;
-      background-color: #333;
-      height: .2em;
-      position: absolute;
-      left: .5em;
-      right: .5em;
-    }
-  
-    &__top-bread {
-      top: .8em;
-    }
-  
-    &__meat {
-      top: 50%;
-      margin-top: -.1em;
-    }
-  
-    &__bottom-bread {
-      bottom: .8em;
-    }
-  
-    @media (max-width: 768px) {
-      & {
-        display: block;
-      }
-    }
-  }
-  
+}
