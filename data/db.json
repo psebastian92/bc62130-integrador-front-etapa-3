@@ -109,17 +109,6 @@
       "categoria": "Robot",
       "id": 10,
       "envio": false
-    },
-    {
-      "id": 15,
-      "nombre": "Sebastián",
-      "precio": "",
-      "stock": "",
-      "marca": "",
-      "categoria": "",
-      "detalles": "",
-      "foto": "",
-      "envio": false
     }
   ],
   "carrito": []
