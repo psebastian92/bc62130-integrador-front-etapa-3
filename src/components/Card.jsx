@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import "./Card.scss";
 import CarritoContext from "../contexts/CarritoContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons"
 
 const Card = ({ producto }) => {
  const { agregarCarritoContext } = useContext(CarritoContext)
@@ -26,7 +28,9 @@ const Card = ({ producto }) => {
           <div className="card__description">
             <p>{producto.detalles}</p>
           </div>
-          <button onClick={() => handleClick(producto)}>Agregar</button>
+          <button onClick={() => handleClick(producto)}>
+          <FontAwesomeIcon icon={faCartPlus} className="card__addToCart" />
+          </button>
         </div>
       </article>
     </a> /* <!-- .card --> */
