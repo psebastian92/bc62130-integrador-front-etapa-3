@@ -1,5 +1,11 @@
+body {
+  background-image: url('/public/img/fondo.avif'); /* Ajusta la ruta a tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .section-cards {
-    background-color: #dfdee0;
     padding: 1em;
   }
   

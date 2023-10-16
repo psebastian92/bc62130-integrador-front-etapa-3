@@ -45,11 +45,12 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
 
   return (
     <div className="registration-form">
+      
+
+      <form onSubmit={handleSubmit}>
       <h3 className="registration-form__fieldset">
         {productoAEditar ? "Editando" : "Agregando"}
       </h3>
-
-      <form onSubmit={handleSubmit}>
         <fieldset className="registration-form__fieldset">
           <div>
             <label htmlFor="lbl-nombre" className="registration-form__label">
