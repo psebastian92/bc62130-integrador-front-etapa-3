@@ -1,20 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Card.scss";
 import CarritoContext from "../contexts/CarritoContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons"
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({ producto }) => {
- const { agregarCarritoContext } = useContext(CarritoContext)
- 
-
+  const { agregarCarritoContext } = useContext(CarritoContext);
+  const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
   const handleClick = (producto) => {
     agregarCarritoContext(producto);
+    setMostrarMensaje(true);
+
+    setTimeout(() => {
+      setMostrarMensaje(false);
+    }, 3000);
   };
 
   return (
-    <a className="card" href="#">
+    <div className="card">
       <article className="card__article">
         <div className="card__image-container">
           <img
@@ -28,12 +32,25 @@ const Card = ({ producto }) => {
           <div className="card__description">
             <p>{producto.detalles}</p>
           </div>
-          <button onClick={() => handleClick(producto)}>
-          <FontAwesomeIcon icon={faCartPlus} className="card__addToCart" />
-          </button>
+
+          <div className="card__addToCart-container">
+            <FontAwesomeIcon
+              icon={faCartPlus}
+              className="card__addToCart-icon"
+              onClick={() => handleClick(producto)}
+            />
+                {mostrarMensaje && (
+              <div
+                className="card__success-message"
+                style={{ transition: "all 0.3s" }}
+              >
+                Producto agregado con éxito
+              </div>
+            )}
+          </div>
         </div>
       </article>
-    </a> /* <!-- .card --> */
+    </div>
   );
 };
 
