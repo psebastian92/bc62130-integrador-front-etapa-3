@@ -7,8 +7,8 @@ const Alta = () => {
   const [productoAEditar, setProductoAEditar] = useState(null)
   return (
     <>
-    <h1>Formulario de alta de productos</h1>
-    <h2>Agregar productos</h2>
+    <h1 className='alta-h1'>Formulario de alta de productos</h1>
+    <h2 className='alta-h2'>Agregar productos</h2>
     <Formulario productoAEditar={productoAEditar} setProductoAEditar={setProductoAEditar}/>
     <hr />
     <Tabla setProductoAEditar={setProductoAEditar}/>

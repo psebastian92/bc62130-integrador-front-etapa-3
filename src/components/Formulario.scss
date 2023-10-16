@@ -1,17 +1,18 @@
-h3 {
+.adding {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 10px;
-  animation-duration: 3s; /* Duración predeterminada para todas las animaciones */
-}
-
-.adding {
+  animation-duration: 3s; 
   color: #007bff;
   animation-name: addingAnimation;
   animation-iteration-count: infinite;
 }
 
 .editing {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation-duration: 3s; 
   color: #ff6347;
   animation-name: editingAnimation;
   animation-iteration-count: infinite;
