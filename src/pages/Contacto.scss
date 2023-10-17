@@ -5,6 +5,11 @@
   align-items: center;
   flex-wrap: wrap;
 
+  &__h1{
+    text-align: center;
+    margin: 10px;
+  }
+
   &__fieldset {
     width: 500px;
     margin: 10px auto;

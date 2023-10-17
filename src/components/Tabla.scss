@@ -27,4 +27,14 @@
     
   }
   
+  @media (max-width: 768px) {
+    .main-header {
+      display: flex;
+      flex-direction: column;
+    }
   
+    .tabla-alta {
+      display: block;
+      width: 100%;
+    }
+  }
