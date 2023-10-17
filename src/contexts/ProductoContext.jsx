@@ -6,7 +6,7 @@ import { del, get, post, put } from "../utils/http";
 const ProductoContext = createContext();
 
 /* 2do -> El armado del Provider */
-const url = "http://localhost:8080/productos/";
+const url = "https://652dfe2cf9afa8ef4b27f229.mockapi.io/productos";
 
 const ProductoProvider = ({ children }) => {
   const [productos, setProductos] = useState(null);

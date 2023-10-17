@@ -7,7 +7,7 @@ import { post } from "../utils/http";
 const CarritoContext = createContext()
 /* 2da -> El armado del Provider */
 
-const url = 'http://localhost:8080/carrito/'
+const url = 'https://652dfe2cf9afa8ef4b27f229.mockapi.io/carrito'
 
 const CarritoProvider = ( { children} ) => {
     const [ agregarAlCarrito, eliminarDelCarrito, limpiarCarrito, carrito ] = useLocalStorage('carrito', [])
