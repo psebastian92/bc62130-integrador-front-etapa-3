@@ -1,5 +1,5 @@
 body {
-  background-image: url('/public/img/fondo.avif'); /* Ajusta la ruta a tu imagen */
+  background-image: url("/public/img/fondo.avif"); /* Ajusta la ruta a tu imagen */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -7,13 +7,48 @@ body {
 }
 
 .section-cards {
-    padding: 1em;
-   
+  padding: 1em;
+
+  &__header{
+    text-align: center;
+    margin: 10px;
   }
+
+  &__header-h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+    background: linear-gradient(135deg, #FF5733, #FFA933); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+
+  }
+
+  &__header-p {
+   font-style: italic;
+    font-size: 1.2rem;
+    color: black; /* Color de texto predeterminado */
+    /* Cambiar el color de la cantidad de productos */
+    &__cantproducts {
+      font-style: normal;
+      color: #FF5733; /* Cambia el color a un tono diferente (por ejemplo, naranja) */
+      font-weight: bold; /* Hacer que la cantidad de productos se destaque más */
+    }
   
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
+    transition: color 0.3s ease; /* Agregar una transición de color suave */
+
   }
+
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+

@@ -1,4 +1,3 @@
-
 .alta-container {
   text-align: center;
   padding: 20px;
@@ -14,6 +13,10 @@
   color: #333;
   margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    font-size: 2.5em;
+  }
 }
 
 .alta-h2 {
@@ -21,6 +24,9 @@
   color: #555;
   margin-bottom: 20px;
   text-align: center;
+  @media (min-width: 426px) and (max-width: 768px) {
+    font-size: 1.5em;
+  }
 }
 
 hr {

@@ -191,16 +191,10 @@
   }
 
   @media (min-width: 426px) and (max-width: 768px) {
-    & {
-      display:  flex;
       
-      
-    }
-
-   
 
     & &__image-container {
-      width: 100%;
+    
       clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
     }
 
