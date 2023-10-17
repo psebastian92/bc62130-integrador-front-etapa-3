@@ -1,3 +1,41 @@
+.carrito-h1 {
+    text-align: center;
+}
+
+.comprar {
+    display: flex;
+    justify-content: center;
+  
+    &__button {
+      font-size: 20px;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      color: rgb(237, 88, 7);
+      background: #FFD600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      padding: 12px 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Agregado box-shadow a la transición */
+  
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      &:hover {
+        background: #FFA900;
+        transform: scale(1.05);
+      }
+  
+      &:active { /* Estilo al hacer clic */
+        background: #FF8000; /* Cambio de color */
+        transform: scale(0.95); /* Reducción de escala al hacer clic */
+        box-shadow: none; /* Quita la sombra al hacer clic */
+      }
+    }
+  }
+  
+  
 table.tabla-carrito {
     border-collapse: collapse;
     width: 95%;

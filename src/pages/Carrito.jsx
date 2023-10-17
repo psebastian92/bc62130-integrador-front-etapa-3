@@ -23,8 +23,8 @@ const Carrito = () => {
 
   return (
     <>
-      <h1>Listado de productos en el carrito</h1>
-      { !carrito.length <= 0 && <button onClick={handleComprar}>Comprar</button>}
+      <h1 className="carrito-h1">Listado de productos en el carrito</h1>
+      
       <table className="tabla-carrito">
         <thead>
           <tr>
@@ -66,6 +66,9 @@ const Carrito = () => {
           </tr>
         </tbody>
       </table>
+      <div className="comprar">
+      { !carrito.length <= 0 && <button onClick={handleComprar} className="comprar__button">Comprar</button>}
+      </div>
     </>
   );
 };
