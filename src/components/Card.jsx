@@ -32,22 +32,21 @@ const Card = ({ producto }) => {
           <div className="card__description">
             <p>{producto.detalles}</p>
           </div>
-
-          <div className="card__addToCart-container">
-            <FontAwesomeIcon
-              icon={faCartPlus}
-              className="card__addToCart-icon"
-              onClick={() => handleClick(producto)}
-            />
-                {mostrarMensaje && (
-              <div
-                className="card__success-message"
-                style={{ transition: "all 0.3s" }}
-              >
-                Producto agregado con éxito
-              </div>
-            )}
-          </div>
+        </div>
+        <div className="card__addToCart-container">
+          <FontAwesomeIcon
+            icon={faCartPlus}
+            className="card__addToCart-icon"
+            onClick={() => handleClick(producto)}
+          />
+          {mostrarMensaje && (
+            <div
+              className="card__success-message"
+              style={{ transition: "all 0.3s" }}
+            >
+              Producto agregado con éxito
+            </div>
+          )}
         </div>
       </article>
     </div>

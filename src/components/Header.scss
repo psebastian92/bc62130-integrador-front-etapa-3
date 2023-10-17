@@ -53,10 +53,10 @@
 
   &__logo-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background-color: gold;
-    flex: 2;
+    flex: 1;
   }
 
   &__logo-img {
@@ -78,7 +78,7 @@
 
   &__form-search {
     background-color: orangered;
-    width: 100%;
+    width: 70%;
   }
 
   &__form-submit {
@@ -90,9 +90,9 @@
   &__carrito-container {
     flex: 0 0 1em; /* shorthand (grow shrink basis */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    flex: 2;
+    flex: 1;
   }
 
   &__cart-icon {

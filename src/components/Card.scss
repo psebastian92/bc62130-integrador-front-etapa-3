@@ -22,10 +22,19 @@
       0 3px 3px rgba(104, 101, 101, 0.01);
   }
 
+  &__content {
+    height: 70px;
+  }
+
+  &:hover &__content {
+   height: 180px;
+  }
+
   &__heading {
     font-size: 1em;
     color: black;
     text-align: center;
+    height: 20%;
   }
 
   &__article {
@@ -39,8 +48,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    position: relative; 
-    
+    position: relative;
+    margin-bottom: 1em;
+    width: 100%;
   }
 
   &__addToCart-icon {
@@ -80,7 +90,7 @@
 
   &__description {
     display: none;
-    margin: 0.5rem;
+    margin: 1rem;
     background-color: grayscale($color: hsla(0, 2%, 62%, 0.443));
     transition: all 0.3s;
     transform: scaleY(0);
@@ -98,6 +108,7 @@
     display: flex;
     opacity: 1;
     transition-delay: 0.3s;
+    
   }
 
   &__image-container {
@@ -147,6 +158,10 @@
     &:focus &__image-container {
       width: 40%;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    & &__heading {
+      font-size: 0.5rem;
     }
   }
 }
