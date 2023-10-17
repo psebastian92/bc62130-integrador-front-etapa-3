@@ -3,6 +3,8 @@ import "./Card.scss";
 import CarritoContext from "../contexts/CarritoContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
 
 const Card = ({ producto }) => {
   const { agregarCarritoContext } = useContext(CarritoContext);
@@ -44,7 +46,7 @@ const Card = ({ producto }) => {
               className="card__success-message"
               style={{ transition: "all 0.3s" }}
             >
-              Producto agregado con éxito
+             <FontAwesomeIcon icon={faCheck} style={{color: "#2cf005",}} />
             </div>
           )}
         </div>
