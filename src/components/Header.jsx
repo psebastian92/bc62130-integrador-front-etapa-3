@@ -18,7 +18,7 @@
           </div>
           <form action="" className="search-bar__form-container">
             <label htmlFor="busqueda" className="search-bar__htmlForm-label">
-              Buscar
+              Búsqueda
             </label>
             <input
               type="search"

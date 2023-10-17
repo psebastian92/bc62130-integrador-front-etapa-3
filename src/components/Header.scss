@@ -26,60 +26,6 @@
 }
 
 /* ------------------------------------- */
-/* NAVBAR                                */
-/* ------------------------------------- */
-
-.nav-bar {
-  background-color: gold;
-
-  &__nav-list {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-
-    @media (max-width: 768px) {
-      & {
-        flex-direction: column;
-      }
-    }
-  }
-
-  &__nav-item {
-    text-align: center;
-    background-color: pink;
-  }
-  &__nav-link {
-    display: block;
-    background-color: gold;
-    border: 0.1em solid gold;
-    border-radius: 0.3em;
-    color: black;
-    font-weight: bold;
-    padding: 1em 7em;
-    text-decoration: none;
-    transition: 0.5s ease;
-  }
-
-  &:hover &__nav-link {
-    background-color: yellow;
-    border-radius: 0.3em;
-    font-size: 1.02em;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 0px orangered;
-
-    &:active {
-      background-color: orange;
-    }
-  }
-
-  @media (max-width: 768px) {
-    & {
-      display: none;
-    }
-  }
-}
-
-/* ------------------------------------- */
 /* SEARCH BAR                            */
 /* ------------------------------------- */
 
@@ -88,6 +34,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
+  &__htmlForm-label {
+    color: rgb(32, 31, 31);
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+  }
 
   &__logo-container,
   &__form-container,
@@ -103,6 +56,7 @@
     justify-content: center;
     align-items: center;
     background-color: gold;
+    flex: 2;
   }
 
   &__logo-img {
@@ -112,8 +66,9 @@
   &__form-container {
     background-color: gold;
     display: flex;
-    flex-basis: 100%;
+    // flex-basis: 100%;
     justify-content: center;
+    flex: 6;
   }
 
   &__form-label {
@@ -123,7 +78,7 @@
 
   &__form-search {
     background-color: orangered;
-    width: 50%;
+    width: 100%;
   }
 
   &__form-submit {
@@ -137,6 +92,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 2;
   }
 
   &__cart-icon {
