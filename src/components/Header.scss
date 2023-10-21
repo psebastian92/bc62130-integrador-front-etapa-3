@@ -95,8 +95,22 @@
     flex: 1;
   }
 
-  &__cart-icon {
+  &__carrito-icon {
     transform: scale(1.5);
+  }
+
+  &__carrito-contador {
+    margin: 0.2rem;
+    color: black;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    clip-path: circle(50% 50% 50% 50%);
+    background-color: white;
+    z-index: 1;
+    width: 1rem;
+    height: 1rem;    
   }
 }
 
