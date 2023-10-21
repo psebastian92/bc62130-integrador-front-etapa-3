@@ -4,7 +4,7 @@ const Nosotros = () => {
   return (
     <section className="about-us">
     <header className="about-us__title">
-      <h1>¿Quiénes somos?</h1>
+      <h1>¿Quiénes somos?🌎</h1>
     </header>
     <div className="about-us__content">
       <p className="about-us__span">¡Bienvenidos a ArduShop!</p>

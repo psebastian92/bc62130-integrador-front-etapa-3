@@ -7,7 +7,7 @@ const Contacto = () => {
   <div className="contact-form">
   
     <form action="URL" method="post">
-    <h1 className='contact-form__h1'>Escribinos tu consulta</h1>
+    <h1 className='contact-form__h1'>Escribinos tu consulta📧</h1>
       <fieldset className="contact-form__fieldset">
         <div>
           <label htmlFor="nombre" className="contact-form__label">Nombre</label>
