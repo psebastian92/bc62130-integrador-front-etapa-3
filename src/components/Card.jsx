@@ -45,7 +45,7 @@ const Card = ({ producto }) => {
             <div
               className={`card__success-message ${mostrarMensaje ? "card__show-success-message" : "card__hide-success-message"}`}
             >
-             <FontAwesomeIcon icon={faCheck} style={{color: "#2cf005",}} />
+             <FontAwesomeIcon className="card__success-message-icon" icon={faCheck} style={{color: "#2cf005",}} />
             </div>
           )}
         </div>
