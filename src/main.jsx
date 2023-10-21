@@ -12,6 +12,7 @@ import Carrito from "./pages/Carrito";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Whatsapp from "./components/Whatsapp";
 import { ProductoProvider } from "./contexts/ProductoContext";
 import { CarritoProvider } from "./contexts/CarritoContext";
 
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/carrito" element={<Carrito />} />
           </Routes>
+          <Whatsapp />
           <Footer />
         </BrowserRouter>
       </ProductoProvider>
