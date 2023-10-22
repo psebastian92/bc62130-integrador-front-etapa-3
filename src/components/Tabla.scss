@@ -37,4 +37,22 @@
       display: block;
       width: 100%;
     }
+    .tabla-alta td {
+   padding: 1px; 
+    }
+/* Mantén tu código CSS existente para la clase .tabla-alta */
+
+@media (max-width: 768px) {
+  .tabla-alta {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Agrega desplazamiento horizontal si es necesario */
+  }
+
+  .tabla-alta th,
+  .tabla-alta td {
+    min-width: 120px; /* Establece un ancho mínimo para cada celda */
+  }
+}
+
   }
