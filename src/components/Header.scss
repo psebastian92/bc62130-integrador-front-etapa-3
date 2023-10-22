@@ -51,6 +51,14 @@
     padding: 1em;
   }
 
+  @media (max-width: 768px) {
+    &__form-container {
+      display: flex;
+  
+    }
+  }
+ 
+
   &__logo-container {
     display: flex;
     justify-content: flex-end;
@@ -77,14 +85,27 @@
   }
 
   &__form-search {
-    background-color: orangered;
+    background-color: rgba(255, 68, 0, 0.511);
+    border-radius: 5px;
     width: 70%;
+    height: 2em;
   }
 
   &__form-submit {
-    padding-inline: 0.5em;
-    background-color: darkslategray;
-    color: white;
+    margin: 2px;
+    padding: 5px;
+    background-color: #0074d9; /* Azul brillante que sugiere tecnología */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-style: italic;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3; 
+    }
   }
 
   &__carrito-container {
