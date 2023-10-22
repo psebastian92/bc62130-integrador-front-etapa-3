@@ -14,19 +14,13 @@ const Header = () => {
 
   const contadorCarrito = carrito ? carrito.length : 0;
 
-  // Función para manejar el cambio en el ancho de la pantalla
+
   const handleResize = () => {
     setMostrarBuscar(window.innerWidth > 768);
   };
 
-  // Agregar un event listener para el cambio de tamaño de la ventana
   window.addEventListener("resize", handleResize);
 
-  // Función para manejar el clic en el botón de búsqueda
-  const handleBuscarClick = () => {
-    // Aquí puedes definir lo que sucede cuando se hace clic en el botón de búsqueda
-    // Por ejemplo, puedes realizar una búsqueda o mostrar un campo de búsqueda expandido, etc.
-  };
 
   return (
     <header className="main-header">
@@ -50,12 +44,10 @@ const Header = () => {
               type="submit"
               value="Buscar"
               className="search-bar__form-submit"
-              onClick={handleBuscarClick} // Agregar la función de manejo de clic
             />
           ) : (
             <button
               className="search-bar__form-submit"
-              onClick={handleBuscarClick} // Agregar la función de manejo de clic
             >
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
