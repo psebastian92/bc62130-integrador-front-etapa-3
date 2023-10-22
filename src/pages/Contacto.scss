@@ -11,6 +11,14 @@
     margin: 10px;
   }
 
+
+  @media (max-width: 768px) {
+    &__h1 {
+      font-size: 2em;
+      padding: 0.3em;
+    }
+   }
+
   &__fieldset {
     width: 500px;
     margin: 10px auto;
