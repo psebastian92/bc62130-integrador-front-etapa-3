@@ -52,10 +52,7 @@
   }
 
   @media (max-width: 768px) {
-    &__form-container {
-      display: flex;
   
-    }
   }
  
 
@@ -133,6 +130,16 @@
     width: 1rem;
     height: 1rem;    
   }
+
+  @media (max-width: 768px) {
+    &__form-container {
+      font-size: 0.7rem;
+    }
+    &__logo-container,
+    &__carrito-container {
+      transform: scale(0.7);
+    }
+  }
 }
 
 /* ------------------------------------- */
@@ -180,5 +187,6 @@
     & {
       display: block;
     }
+    
   }
 }
