@@ -30,7 +30,7 @@ const Card = ({ producto }) => {
           />
         </div>
         <div className="card__content">
-          <h2 className="card__heading">{producto.nombre}</h2>
+          <h2 className="card__header">{producto.nombre}</h2>
           <div className="card__description">
             <p>{producto.detalles}</p>
           </div>
