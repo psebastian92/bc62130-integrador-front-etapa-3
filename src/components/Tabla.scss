@@ -11,7 +11,7 @@
     color: #fff;
     font-size: 1.2em;
     padding: 10px;
-    border: 1px solid #000; // Borde para las celdas del encabezado
+    border: 1px solid #000; 
   }
   
   .tabla-alta td {
@@ -40,18 +40,18 @@
     .tabla-alta td {
    padding: 1px; 
     }
-/* Mantén tu código CSS existente para la clase .tabla-alta */
+
 
 @media (max-width: 768px) {
   .tabla-alta {
     display: block;
     width: 100%;
-    overflow-x: auto; /* Agrega desplazamiento horizontal si es necesario */
+    overflow-x: auto; 
   }
 
   .tabla-alta th,
   .tabla-alta td {
-    min-width: 120px; /* Establece un ancho mínimo para cada celda */
+    min-width: 120px; 
   }
 }
 

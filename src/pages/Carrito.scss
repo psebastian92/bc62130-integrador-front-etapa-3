@@ -58,5 +58,13 @@ table.tabla-carrito {
           }
     }
     
+   
+
 }
 
+@media  (max-width: 768px) {
+  table.tabla-carrito{
+  background-color: #8b0860 ;
+  overflow-x: auto;
+  } 
+}
