@@ -41,6 +41,12 @@ body {
 
   }
 
+  @media (max-width: 768px) {
+    &__header-h1 {
+      font-size: 3em;
+    }
+  }
+
 }
 
 .cards-container {
