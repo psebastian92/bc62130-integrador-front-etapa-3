@@ -1,0 +1,38 @@
+.drop-area {
+    border: 2px dashed #ff0404;
+    border-radius: 20px;
+    width: 300px;
+    margin: 25px 0;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.521);
+    text-align: center;
+    & p {
+        margin: 30px;
+    }
+
+    &-button {
+        display: inline-block;
+        padding: 10px;
+        background-color: #ac21b8;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 30px;
+    }
+
+    & #lbl-foto {
+        display: none;
+    }
+
+    &-image img {
+        width: 100px;
+        margin-top: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+

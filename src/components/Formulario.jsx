@@ -2,6 +2,7 @@ import "./Formulario.scss";
 import { useContext, useEffect, useState } from "react";
 import ProductoContext from "../contexts/ProductoContext";
 import { useForm } from "../hooks/useForm";
+import DragDrop from './DragDrop'
 
 const formInicial = {
   id: null,
@@ -128,19 +129,16 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
               className="registration-form__input"
             />
           </div>
-          <div>
-            <label htmlFor="lbl-foto" className="registration-form__label">
-              Foto
-            </label>
-            <input
-              type="text"
-              name="foto"
-              id="lbl-foto"
-              value={form.foto}
-              onChange={handleChange}
-              className="registration-form__input"
-            />
-          </div>
+          {/*  <div>
+          <label htmlFor="lbl-foto">Foto</label>
+          <input type="text" name="foto" id="lbl-foto" value={form.foto} onChange={handleChange} />
+        </div> */}
+
+          <DragDrop
+            // setFoto={setFoto}
+            // setSrcImagen={setSrcImagen}
+            // srcImagen={srcImagen}
+          />
           <div className="registration-form__envio">
             <label htmlFor="lbl-envio" className="registration-form__label">
               Envío

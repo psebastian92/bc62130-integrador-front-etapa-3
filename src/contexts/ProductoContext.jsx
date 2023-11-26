@@ -8,8 +8,8 @@ const ProductoContext = createContext();
 /* 2do -> El armado del Provider */
 // MOCKAPI
 //const url = "https://652dfe2cf9afa8ef4b27f229.mockapi.io/productos";
-//const url = "http://localhost:8080/api/productos";
-const url = "https://etapa-3-ymva.onrender.com/api/productos";
+const url = "http://localhost:8080/api/productos";
+//const url = "https://etapa-3-ymva.onrender.com/api/productos";
 
 const ProductoProvider = ({ children }) => {
   const [productos, setProductos] = useState(null);
