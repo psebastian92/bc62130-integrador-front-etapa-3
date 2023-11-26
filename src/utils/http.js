@@ -2,95 +2,95 @@
 /* CRUD => R:Read => GET */
 export const get = async (url) => {
 
-  try {
-      const respuesta = await fetch(url) // objeto respuesta.
-      console.log(respuesta)
-      if ( !respuesta.ok ) {
-          throw new Error(`Algo paso: ${respuesta.status}, ${respuesta.statusText}`)
-      }
-      const data = await respuesta.json()
-      return data
+    try {
+        const respuesta = await fetch(url) // objeto respuesta.
+        console.log(respuesta)
+        if ( !respuesta.ok ) {
+            throw new Error(`Algo paso: ${respuesta.status}, ${respuesta.statusText}`)
+        }
+        const data = await respuesta.json()
+        return data
 
-  } catch (error) {
-      console.error(`ERROR GET:`, error)
-  }
+    } catch (error) {
+        console.error(`ERROR GET:`, error)
+    }
 
 }
 /* CRUD => C:CREATE => POST */
 export const post = async (url, dato) => { 
 
-  let config = {}
+    let config = {}
 
-  try {
-      if ( dato instanceof FormData ) {
-          config = {
-              method: 'POST',
-              body: dato
-          }
-      } else {
-          config = {
-              method: 'POST',
-              headers: { 'content-type': 'application/json'},
-              body: JSON.stringify(dato)
-          }
-      }
+    try {
+        if ( dato instanceof FormData ) {
+            config = {
+                method: 'POST',
+                body: dato
+            }
+        } else {
+            config = {
+                method: 'POST',
+                headers: { 'content-type': 'application/json'},
+                body: JSON.stringify(dato)
+            }
+        }
 
-      
-      const respuesta = await fetch(url, config)
-      if ( !respuesta.ok ) {
-          throw new Error(`Algo paso: ${respuesta.status}, ${respuesta.statusText}`)
-      }
-      const productoGuardado = await respuesta.json()
-      return productoGuardado
+        
+        const respuesta = await fetch(url, config)
+        if ( !respuesta.ok ) {
+            throw new Error(`Algo paso: ${respuesta.status}, ${respuesta.statusText}`)
+        }
+        const productoGuardado = await respuesta.json()
+        return productoGuardado
 
-  } catch (error) {
-      console.error(`ERROR POST`, error)
-  }
+    } catch (error) {
+        console.error(`ERROR POST`, error)
+    }
 
 }
 
 /* CRUD => U:UPDATE => PUT */
 export const put = async (url, id, dato) => {
-  try {
-      const config = {
-          method: 'PUT',
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(dato)
-      }
-      const urlFull = url + id
-      const respuesta = await fetch(urlFull, config)
-      if( !respuesta.ok ) {
-          throw new Error(`Algo ocurrió, ${respuesta.status} ${respuesta.statusText}`)
-      }
-      const productoEditado = await respuesta.json()
+    try {
+        const config = {
+            method: 'PUT',
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(dato)
+        }
+        const urlFull = `${url}/${id}`
+        const respuesta = await fetch(urlFull, config)
+        if( !respuesta.ok ) {
+            throw new Error(`Algo ocurrió, ${respuesta.status} ${respuesta.statusText}`)
+        }
+        const productoEditado = await respuesta.json()
 
-      return productoEditado
+        return productoEditado
 
-  } catch (error) {
-      console.error("ERROR PUT", error)
-  }
+    } catch (error) {
+        console.error("ERROR PUT", error)
+    }
 }
 
 /* CRUD => D:DELETE => DELETE */
 export const del = async (url, id) => {
 
-  const config = {
-      method: 'DELETE'
-  }
-  const urlFull = url + id
-  console.warn(urlFull)
+    const config = {
+        method: 'DELETE'
+    }
+    const urlFull = `${url}/${id}`
+    console.warn(urlFull)
 
-  try {
-      
-      const respuesta = await fetch(urlFull, config)
-      if ( !respuesta.ok ) {
-          throw new Error(`Algo paso: ${respuesta.status} ${respuesta.statusText}`)
-      }
-      const resultado = await respuesta.json()
-      return resultado
+    try {
+        
+        const respuesta = await fetch(urlFull, config)
+        if ( !respuesta.ok ) {
+            throw new Error(`Algo paso: ${respuesta.status} ${respuesta.statusText}`)
+        }
+        const resultado = await respuesta.json()
+        return resultado
 
-  } catch (error) {
-      console.error('ERROR DELETE', error)
-  }
+    } catch (error) {
+        console.error('ERROR DELETE', error)
+    }
 
 }
