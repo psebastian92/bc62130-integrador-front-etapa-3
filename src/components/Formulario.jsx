@@ -24,9 +24,17 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
   const { crearProductoContext, actualizarProductoContext } =
     useContext(ProductoContext);
 
-  useEffect(() => {
-    productoAEditar ? setForm(productoAEditar) : setForm(formInicial);
-  }, [productoAEditar, setProductoAEditar]);
+    useEffect(() => {
+      if ( productoAEditar ) {
+        setSrcImagen(productoAEditar.foto)
+        setForm(productoAEditar)
+      } else {
+        setForm(formInicial)
+      }
+  
+      // productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
+    }, [productoAEditar, setProductoAEditar])
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault() // Detener el comportamiento del formulario
