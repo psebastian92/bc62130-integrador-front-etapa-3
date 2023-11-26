@@ -29,23 +29,27 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
   }, [productoAEditar, setProductoAEditar]);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault() // Detener el comportamiento del formulario
     try {
-      if (form.id === null) {
-        await crearProductoContext(form);
+      if ( form.id === null ) {
+        const productoNuevo = {...form, ...foto}
+        await crearProductoContext(productoNuevo)
       } else {
-        await actualizarProductoContext(form);
+        const productoEditado = {...form, ...foto}
+        await actualizarProductoContext(productoEditado)
       }
-      handleReset();
+      handleReset()
     } catch (error) {
-      console.error("Ocurrió un error en el handleSubmit", error);
+      console.error('Ocurrió un error en el handleSubmit', error)  
     }
-  };
+    
+  }
 
-  const handleReset = () => {
-    setForm(formInicial);
-    setProductoAEditar(null);
-  };
+  const handleReset = ()  => {
+    setForm(formInicial)
+    setProductoAEditar(null)
+  }
+
 
   return (
     <div className="registration-form">
