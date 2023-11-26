@@ -1,38 +1,40 @@
 .drop-area {
-    border: 2px dashed #ff0404;
-    border-radius: 20px;
-    width: 300px;
-    margin: 25px 0;
-    padding: 20px;
-    background-color: rgba(128, 128, 128, 0.521);
-    text-align: center;
-    & p {
-        margin: 30px;
-    }
+  border: 2px dashed #ff0404;
+  border-radius: 20px;
+  width: 300px;
+  margin: 25px 0;
+  padding: 20px;
+  background-color: rgba(128, 128, 128, 0.521);
+  text-align: center;
+  & p {
+    margin: 30px;
+  }
 
-    &-button {
-        display: inline-block;
-        padding: 10px;
-        background-color: #ac21b8;
-        cursor: pointer;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-bottom: 30px;
+  &-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(232, 236, 13);
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    transition: background-color 0.3s, border-color 0.3s;
+    
+    &:hover {
+      background-color: rgb(194, 123, 16);
+      color: #f2f2f2;
+      border-color: #f2f2f2;
     }
+  }
 
-    & #lbl-foto {
-        display: none;
-    }
+  & #lbl-foto {
+    display: none;
+  }
 
-    &-image img {
-        width: 100px;
-        margin-top: 10px;
-        margin-right: 10px;
-        vertical-align: middle;
-    }
+  &-image img {
+    width: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
 }
-
-
-
-
-
