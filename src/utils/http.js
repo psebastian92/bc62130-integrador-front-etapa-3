@@ -57,7 +57,7 @@ export const put = async (url, id, dato) => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(dato)
         }
-        const urlFull = `${url}/${id}`
+        const urlFull = url + id
         const respuesta = await fetch(urlFull, config)
         if( !respuesta.ok ) {
             throw new Error(`Algo ocurrió, ${respuesta.status} ${respuesta.statusText}`)
@@ -77,7 +77,7 @@ export const del = async (url, id) => {
     const config = {
         method: 'DELETE'
     }
-    const urlFull = `${url}/${id}`
+    const urlFull = url + id
     console.warn(urlFull)
 
     try {

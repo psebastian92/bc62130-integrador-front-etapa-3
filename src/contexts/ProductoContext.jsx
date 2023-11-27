@@ -3,45 +3,41 @@ import { del, get, post, put } from "../utils/http";
 
 /* Creando CONTEXTO */
 /* 1er -> Creación del contexto */
-const ProductoContext = createContext();
+const ProductoContext = createContext()
 
 /* 2do -> El armado del Provider */
-// MOCKAPI
-//const url = "https://652dfe2cf9afa8ef4b27f229.mockapi.io/productos";
-const url = "http://localhost:8080/api/productos";
-//const url = "https://etapa-3-ymva.onrender.com/api/productos";
+const url = 'http://localhost:8080/api/productos/'
 
-const ProductoProvider = ({ children }) => {
-  const [productos, setProductos] = useState(null);
+const ProductoProvider = ( { children } ) => {
+    const [productos, setProductos] = useState(null)
 
-  useEffect(() => {
-    obtenerProductos();
-  }, []); // <= Array vacío hace solo una petición
+    useEffect(() => {
+        obtenerProductos()
+    }, []) // <= Array vacío hace solo una petición
 
-  const obtenerProductos = async () => {
+   const obtenerProductos = async () => {
     try {
-      const products = await get(url);
-      setProductos(products);
+        const products = await get(url)
+        setProductos(products)
     } catch (error) {
-      console.error(`ERROR obtenerProductos: ${error}`);
+        console.error(`ERROR obtenerProductos: ${error}`)
     }
-  };
+   }
 
-  const crearProductoContext = async (productoNuevo) => {
+   const crearProductoContext = async (productoNuevo) => {
     try {
-      // Hago la petición (Guardo producto backend)
-      const productoBackNuevo = await post(url, productoNuevo)
-      // Actualizar el estado con el nuevo producto
-      setProductos([...productos, productoBackNuevo]);
+        // Hago la petición (Guardo producto backend)
+        const productoBackNuevo = await post(url, productoNuevo)
+        // Actualizar el estado con el nuevo producto
+        setProductos([...productos, productoBackNuevo])
     } catch (error) {
-      console.error("Falló crearProductoContext", error);
+        console.error('Falló crearProductoContext', error)
     }
-  };
+   }
 
-  const actualizarProductoContext = async (productoEditar) => {
+   const actualizarProductoContext = async (productoEditar) => {
     try {
         const productoEditado = await put(url, productoEditar.id, productoEditar)
-        console.log(productoEditado)
         const nuevaDB = productos.map( producto => producto.id === productoEditado.id ? productoEditado : producto )
         setProductos(nuevaDB)
     } catch (error) {
@@ -62,13 +58,10 @@ const ProductoProvider = ({ children }) => {
 
     const data = { productos, crearProductoContext, eliminarProductoContext, actualizarProductoContext }
 
-
-  return (
-    <ProductoContext.Provider value={data}>{children}</ProductoContext.Provider>
-  );
-};
+    return <ProductoContext.Provider value={data}>{children}</ProductoContext.Provider>
+}
 
 /* 3er -> Exportaciones */
-export { ProductoProvider };
+export { ProductoProvider }
 
-export default ProductoContext;
+export default ProductoContext
