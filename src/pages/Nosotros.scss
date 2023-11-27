@@ -27,13 +27,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start; // Alinea verticalmente al principio
+    align-items: flex-start; 
     justify-content: center;
     margin: 10px;
     font-size: 1.5em;
     color: black;
     background: linear-gradient(rgba(0, 247, 247, 0.3), rgba(0, 247, 247, 0.3)),
-      url(img/fondo-nosotros.jpeg);
+      url(/public/img/fondo-nosotros.jpeg);
   }
 
   &__content-img {
