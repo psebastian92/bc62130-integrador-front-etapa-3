@@ -48,7 +48,7 @@ const ProductoProvider = ( { children } ) => {
    const eliminarProductoContext = async (id) => {
     try {
       const productoEliminado = await del(url, id);
-      console.log("Producto eliminado:", productoEliminado); // Agrega esta línea para verificar el estado después de la eliminación
+      console.log("Producto eliminado:", productoEliminado);
       const nuevaDB = productos.filter(producto => producto.id !== id);
       setProductos(nuevaDB);
     } catch (error) {
