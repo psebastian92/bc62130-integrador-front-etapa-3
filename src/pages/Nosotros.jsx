@@ -7,7 +7,7 @@ const Nosotros = () => {
         <h1>¿Quiénes somos?🌎</h1>
       </header>
       <div className="about-us__content-img">
-          <img className="about-us__imagen" src="img/nosotros.jpeg" alt="" />
+          <img className="about-us__imagen" src="img/fondo-nosotros.jpeg" alt="" />
         </div>
       <div className="about-us__content">
         <p className="about-us__span">¡Bienvenidos a ArduShop!</p>
