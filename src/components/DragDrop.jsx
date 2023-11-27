@@ -49,7 +49,8 @@ const DragDrop = ({ setFoto, setSrcImagen, srcImagen }) => {
 
     try {
       formData.append('foto', file);
-      const imagenUp = await post('http://localhost:8080/api/upload', formData);
+      // const imagenUp = await post('http://localhost:8080/api/upload', formData);
+      const imagenUp = await post('https://etapa-3-ymva.onrender.com/api/productos/upload', formData);
       setFoto(imagenUp);
     } catch (error) {
       console.error('[uploadFile]:', error);
