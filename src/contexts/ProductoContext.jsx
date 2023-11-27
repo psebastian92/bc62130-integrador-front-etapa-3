@@ -6,7 +6,8 @@ import { del, get, post, put } from "../utils/http";
 const ProductoContext = createContext()
 
 /* 2do -> El armado del Provider */
-const url = 'http://localhost:8080/api/productos/'
+// const url = 'http://localhost:8080/api/productos/'
+const url = 'https://etapa-3-ymva.onrender.com/api/productos/'
 
 const ProductoProvider = ( { children } ) => {
     const [productos, setProductos] = useState(null)
@@ -27,14 +28,13 @@ const ProductoProvider = ( { children } ) => {
    const crearProductoContext = async (productoNuevo) => {
     try {
         // Hago la petición (Guardo producto backend)
-        const productoBackNuevo = await post(url, productoNuevo)
-        // Actualizar el estado con el nuevo producto
-        setProductos([...productos, productoBackNuevo])
+        const productoBackNuevo = await post(url, productoNuevo);
+        console.log("Producto creado:", productoBackNuevo); 
+        setProductos([...productos, productoBackNuevo]);
     } catch (error) {
-        console.error('Falló crearProductoContext', error)
+        console.error('Falló crearProductoContext', error);
     }
-   }
-
+  }
    const actualizarProductoContext = async (productoEditar) => {
     try {
         const productoEditado = await put(url, productoEditar.id, productoEditar)
@@ -47,14 +47,15 @@ const ProductoProvider = ( { children } ) => {
 
    const eliminarProductoContext = async (id) => {
     try {
-        const productoEliminado = await del(url, id)
-        console.log(productoEliminado) // {}
-        const nuevaDB = productos.filter(producto => producto.id !== id)
-        setProductos(nuevaDB)
+      const productoEliminado = await del(url, id);
+      console.log("Producto eliminado:", productoEliminado); // Agrega esta línea para verificar el estado después de la eliminación
+      const nuevaDB = productos.filter(producto => producto.id !== id);
+      setProductos(nuevaDB);
     } catch (error) {
-        console.log('Todo salió mal en el eliminarProductoContext', error)
+      console.log('Todo salió mal en el eliminarProductoContext', error);
     }
-   }
+  }
+  
 
     const data = { productos, crearProductoContext, eliminarProductoContext, actualizarProductoContext }
 

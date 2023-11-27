@@ -36,22 +36,30 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
     }, [productoAEditar, setProductoAEditar])
   
 
-  const handleSubmit = async (e) => {
-    e.preventDefault() // Detener el comportamiento del formulario
-    try {
-      if ( form.id === null ) {
-        const productoNuevo = {...form, ...foto}
-        await crearProductoContext(productoNuevo)
-      } else {
-        const productoEditado = {...form, ...foto}
-        await actualizarProductoContext(productoEditado)
-      }
-      handleReset()
-    } catch (error) {
-      console.error('Ocurrió un error en el handleSubmit', error)  
-    }
+    const [productos, setProductos] = useState([]);
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
     
-  }
+      try {
+        if (form.id === null) {
+          const productoNuevo = { ...form, ...foto };
+          const newId = await crearProductoContext(productoNuevo);
+          productoNuevo.id = newId;
+          setProductos([...productos, productoNuevo]);
+        } else {
+          const productoEditado = { ...form, ...foto };
+          await actualizarProductoContext(productoEditado);
+          const nuevaDB = productos.map((producto) =>
+            producto.id === productoEditado.id ? productoEditado : producto
+          );
+          setProductos(nuevaDB);
+        }
+        handleReset();
+      } catch (error) {
+        console.error('Ocurrió un error en el handleSubmit', error);
+      }
+    };
 
   const handleReset = ()  => {
     setForm(formInicial)
