@@ -56,6 +56,7 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
           setProductos(nuevaDB);
         }
         handleReset();
+        window.location.reload();
       } catch (error) {
         console.error('Ocurrió un error en el handleSubmit', error);
       }
@@ -93,7 +94,7 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
               Precio
             </label>
             <input
-              type="text"
+              type="number"
               name="precio"
               id="lbl-precio"
               value={form.precio}
@@ -106,7 +107,7 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
               Stock
             </label>
             <input
-              type="text"
+              type="number"
               name="stock"
               id="lbl-stock"
               value={form.stock}
