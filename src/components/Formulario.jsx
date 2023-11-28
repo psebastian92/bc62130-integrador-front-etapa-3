@@ -56,7 +56,7 @@ const Formulario = ({ productoAEditar, setProductoAEditar }) => {
           setProductos(nuevaDB);
         }
         handleReset();
-        // window.location.reload();
+        window.location.reload();
       } catch (error) {
         console.error('Ocurrió un error en el handleSubmit', error);
       }
