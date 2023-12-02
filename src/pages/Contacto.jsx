@@ -8,7 +8,7 @@ const Contacto = () => {
   };
   return (
     <div className="contact-form">
-       <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h1 className="contact-form__h1">Escribinos tu consulta📧</h1>
         <fieldset className="contact-form__fieldset">
           <div>
@@ -83,12 +83,16 @@ const Contacto = () => {
             <br />
 
             <div className="contact-form__img">
-          <img
-            className="contact__image"
-            src= "/img/ubicacion.png"
-            alt="Ubicación"
-          />
-        </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6438599606713!2d-58.45296968843415!3d-34.587876956549344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f019c0a135%3A0xb0f0e5c32189ef4b!2sAv.%20Jorge%20Newbery%204000%2C%20CABA!5e0!3m2!1ses!2sar!4v1701541584817!5m2!1ses!2sar"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
 
           <div className="contact-form__buttons">
